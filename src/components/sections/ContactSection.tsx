@@ -39,7 +39,7 @@ export default function ContactSection() {
     formData.append("message", data.message);
 
     try {
-      await fetch("/", {
+      await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formData.toString(),
