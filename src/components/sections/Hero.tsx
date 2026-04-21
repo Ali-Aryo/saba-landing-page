@@ -1,7 +1,26 @@
+"use client";
+
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/ui/Button";
+import { useTypingEffect } from "@/hooks/useTypingEffect";
+
+const HERO_PHRASES = [
+  "Execution-Focused Model.",
+  "Next-Generation AI Campuses.",
+  "Secure, Scalable Compute.",
+  "Sovereign AI Compute.",
+  "Accelerating Time to Market.",
+];
 
 export default function Hero() {
+  const { displayText } = useTypingEffect({
+    phrases: HERO_PHRASES,
+    typeSpeed: 50,
+    eraseSpeed: 30,
+    holdDelay: 4000,
+    pauseDelay: 500,
+  });
+
   return (
     <section
       className="relative min-h-screen flex items-center pt-24 pb-32 overflow-hidden px-6 lg:px-8"
@@ -37,25 +56,23 @@ export default function Hero() {
       {/* Content */}
       <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-12 gap-12 items-center w-full">
         <div className="lg:col-span-8">
-          <h1
-            id="hero-heading"
-            className="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[1.05] mb-6 text-on-background"
-          >
-            Unlocking Intelligence.
-            <br />
-            <span
-              className="text-primary-container"
+          <div className="min-h-[140px] md:min-h-[180px] lg:min-h-[220px] mb-6 flex items-end">
+            <h1
+              id="hero-heading"
+              className="font-headline font-bold text-5xl md:text-7xl lg:text-8xl tracking-tighter leading-[1.05] text-primary-container"
               style={{
                 filter: "drop-shadow(0 0 30px rgba(80,143,248,0.3))",
               }}
             >
-              Scaling Impact.
-            </span>
-          </h1>
+              {displayText}
+              <span className="inline-block w-[3px] h-[0.85em] bg-primary-container/70 ml-1 align-baseline animate-pulse" />
+            </h1>
+          </div>
 
           <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
-            We architecture strategic AI advantages for enterprise. Moving
-            beyond conceptual frameworks into operational reality.
+            Integrating infrastructure expertise, market access, and
+            customer-side demand understanding to identify, structure, and
+            advance confidential AI opportunities.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

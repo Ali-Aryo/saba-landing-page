@@ -1,4 +1,4 @@
-import { Compass, Cpu, GraduationCap } from "lucide-react";
+import { Globe, Award, Rocket } from "lucide-react";
 import type { ReactNode } from "react";
 
 interface Competency {
@@ -9,22 +9,22 @@ interface Competency {
 
 const competencies: Competency[] = [
   {
-    icon: <Compass size={28} />,
-    title: "AI Strategy",
+    icon: <Globe size={28} />,
+    title: "Infrastructure Knowledge",
     description:
-      "Blueprint design for enterprise intelligence. We define the critical path from legacy systems to predictive dominance.",
+      "Deep Canadian AI infrastructure knowledge and relationships.",
   },
   {
-    icon: <Cpu size={28} />,
-    title: "Implementation",
+    icon: <Award size={28} />,
+    title: "Top-Ranked Experience",
     description:
-      "Seamless integration of large language models and machine learning pipelines into existing operational workflows.",
+      "Direct experience leading Canada's top-ranked AI cluster (Top500).",
   },
   {
-    icon: <GraduationCap size={28} />,
-    title: "Training & Enablement",
+    icon: <Rocket size={28} />,
+    title: "Executable Projects",
     description:
-      "Elevating human capital to leverage new cognitive tools effectively. Building a culture of technological fluency.",
+      "Ability to translate demand signals into executable projects for AI-native firms and labs.",
   },
 ];
 
@@ -45,9 +45,8 @@ export default function CoreCompetencies() {
             Core Competencies
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed">
-            Precision instruments for transformation. We deploy high-end
-            architectural strategies to ensure your technological evolution is
-            both profound and secure.
+            Access to AI-native firms and labs seeking GPU clusters, with the
+            ability to translate demand signals into executable projects.
           </p>
         </div>
 
