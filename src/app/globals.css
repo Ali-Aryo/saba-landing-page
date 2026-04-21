@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   SABA Design System – "The Obsidian Architect"
+   ────────────────────────────────────────────── */
+
+@theme inline {
+  /* ── Fonts ── */
+  --font-sans: var(--font-inter);
+  --font-headline: var(--font-inter);
+
+  /* ── Color Tokens (Material You - Dark) ── */
+  --color-surface-lowest: #0A0E1A;
+  --color-surface: #0F131F;
+  --color-surface-dim: #0F131F;
+  --color-surface-container-low: #171B28;
+  --color-surface-container: #1B1F2C;
+  --color-surface-container-high: #262A37;
+  --color-surface-container-highest: #313442;
+  --color-surface-variant: #313442;
+  --color-surface-bright: #353946;
+  --color-surface-tint: #ACC7FF;
+
+  --color-primary: #ACC7FF;
+  --color-primary-container: #508FF8;
+  --color-primary-fixed: #D7E2FF;
+  --color-primary-fixed-dim: #ACC7FF;
+
+  --color-secondary: #B2C7F5;
+  --color-secondary-container: #344970;
+  --color-secondary-fixed: #D7E2FF;
+  --color-secondary-fixed-dim: #B2C7F5;
+
+  --color-tertiary: #FFB873;
+  --color-tertiary-container: #D37B02;
+  --color-tertiary-fixed: #FFDCBF;
+  --color-tertiary-fixed-dim: #FFB873;
+
+  --color-error: #FFB4AB;
+  --color-error-container: #93000A;
+
+  --color-on-background: #DFE2F3;
+  --color-on-surface: #DFE2F3;
+  --color-on-surface-variant: #C2C6D5;
+  --color-on-primary: #002F68;
+  --color-on-primary-container: #00285B;
+  --color-on-primary-fixed: #001A40;
+  --color-on-primary-fixed-variant: #004492;
+  --color-on-secondary: #1A3055;
+  --color-on-secondary-container: #A4B8E6;
+  --color-on-secondary-fixed: #011A3F;
+  --color-on-secondary-fixed-variant: #32476D;
+  --color-on-tertiary: #4B2800;
+  --color-on-tertiary-container: #412200;
+  --color-on-tertiary-fixed: #2D1600;
+  --color-on-tertiary-fixed-variant: #6A3B00;
+  --color-on-error: #690005;
+  --color-on-error-container: #FFDAD6;
+
+  --color-outline: #8C909E;
+  --color-outline-variant: #424753;
+
+  --color-inverse-surface: #DFE2F3;
+  --color-inverse-on-surface: #2C303D;
+  --color-inverse-primary: #005BBF;
+
+  --color-background: #0F131F;
+  --color-foreground: #DFE2F3;
+}
+
+/* ── Global Resets ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-surface-lowest);
+  color: var(--color-on-background);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-primary-container);
+  color: var(--color-on-primary-fixed);
+}
+
+/* ── Scrollbar (subtle) ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-lowest);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-outline-variant);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-outline);
+}
+
+/* ── Focus ring override ── */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-container);
+  outline-offset: 2px;
+}

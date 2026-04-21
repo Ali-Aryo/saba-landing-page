@@ -1,0 +1,44 @@
+const footerLinks = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
+  { label: "LinkedIn", href: "#" },
+  { label: "Contact", href: "#contact" },
+];
+
+export default function Footer() {
+  return (
+    <footer
+      className="bg-surface-lowest w-full py-12 px-6 lg:px-8 border-t border-on-background/10 mt-auto"
+      role="contentinfo"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm font-medium text-on-surface-variant">
+        {/* Brand */}
+        <div className="text-lg font-bold text-on-background tracking-tighter font-headline">
+          SABA
+        </div>
+
+        {/* Copyright */}
+        <p className="text-on-surface-variant text-center">
+          © {new Date().getFullYear()} SABA Management Consulting. All rights
+          reserved.
+        </p>
+
+        {/* Links */}
+        <nav
+          className="flex flex-wrap justify-center gap-6"
+          aria-label="Footer"
+        >
+          {footerLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-all duration-300"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </footer>
+  );
+}
