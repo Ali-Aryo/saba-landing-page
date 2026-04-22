@@ -10,20 +10,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "SABA Management Consulting — Strategic AI for Enterprise",
+  title: "SABA Management Consulting — AI Infrastructure Strategy and Market Access",
   description:
-    "We architecture strategic AI advantages for enterprise. Moving beyond conceptual frameworks into operational reality.",
+    "SABA helps AI-native firms secure GPU capacity, enables land, power, and shell owners to find offtakers, and connects neo-clouds with capital partners for AI infrastructure in North America.",
   keywords: [
-    "AI consulting",
-    "enterprise AI",
-    "management consulting",
-    "AI strategy",
-    "LLM implementation",
+    "AI infrastructure consulting",
+    "GPU capacity",
+    "neo-cloud",
+    "AI infrastructure strategy",
+    "AI offtake agreements",
+    "North America AI infrastructure",
   ],
   openGraph: {
-    title: "SABA Management Consulting",
+    title: "SABA Management Consulting — AI Infrastructure Strategy and Market Access",
     description:
-      "Unlocking Intelligence. Scaling Impact. Strategic AI consulting for enterprise.",
+      "Connecting AI natives, land/power/shell providers, and neo-clouds with capital partners for secure, scalable AI infrastructure across North America.",
     type: "website",
   },
 };

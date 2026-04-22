@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
 const navLinks = [
-  { label: "Services", href: "#services" },
+  { label: "Services for AI Infra", href: "#services" },
   { label: "Insights", href: "#insights" },
   { label: "Contact", href: "#contact" },
 ];
@@ -32,27 +32,31 @@ export default function Header() {
     <header
       className={`
         fixed top-0 w-full z-50 transition-all duration-500
-        ${
-          scrolled
-            ? "bg-surface-lowest/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-            : "bg-gradient-to-b from-surface-lowest to-transparent"
+        ${scrolled
+          ? "bg-surface-lowest/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+          : "bg-gradient-to-b from-surface-lowest to-transparent"
         }
       `}
       role="banner"
     >
-      <div className="flex justify-between items-center px-6 lg:px-8 py-4 max-w-7xl mx-auto">
-        {/* Logo */}
-        <a
-          href="#"
-          className="text-xl font-bold tracking-tighter text-on-background font-headline"
-          aria-label="SABA – Home"
-        >
-          SABA
-        </a>
+      <div className="flex justify-between items-center px-6 lg:px-8 py-4 max-w-7xl mx-auto relative">
+        {/* Logo + Tagline */}
+        <div className="flex flex-col">
+          <a
+            href="#"
+            className="text-xl font-bold tracking-tighter text-on-background font-headline"
+            aria-label="SABA – Home"
+          >
+            SABA
+          </a>
+          <span className="text-[10px] sm:text-xs text-on-surface-variant/60 tracking-wide leading-tight hidden sm:block">
+            AI Infrastructure: AI Natives · Neo-Clouds · LPS
+          </span>
+        </div>
 
         {/* Desktop Navigation */}
         <nav
-          className="hidden md:flex items-center gap-8"
+          className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2"
           aria-label="Primary"
         >
           {navLinks.map((link) => (
@@ -93,10 +97,9 @@ export default function Header() {
           bg-surface-lowest/95 backdrop-blur-xl
           flex flex-col items-center justify-center gap-8
           transition-all duration-500
-          ${
-            mobileOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+          ${mobileOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
           }
         `}
         role="dialog"

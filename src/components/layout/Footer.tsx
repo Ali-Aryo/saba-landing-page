@@ -1,7 +1,7 @@
 const footerLinks = [
   { label: "Privacy Policy", href: "#" },
   { label: "Terms of Service", href: "#" },
-  { label: "LinkedIn", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/saeed-otufat-shamsi-51a840/" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -27,6 +27,8 @@ export default function Footer() {
               <a
                 key={link.label}
                 href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="text-on-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-all duration-300"
               >
                 {link.label}

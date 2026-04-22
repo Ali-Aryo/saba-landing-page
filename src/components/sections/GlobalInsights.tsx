@@ -10,21 +10,24 @@ interface Talk {
 const talks: Talk[] = [
   {
     src: "/images/talk1.png",
-    alt: "Talk 1 — conference presentation",
-    title: "Talk 1",
-    description: "Exploring the frontier of AI infrastructure strategy.",
+    alt: "Talk 1 — Where AI Natives Are Actually Siting Capacity",
+    title: "",
+    description:
+      "Infrastructure Design for High-Performance AI Clusters: A Case Study Analysis of the Most Powerful Canadian Deployments",
   },
   {
     src: "/images/talk2.png",
-    alt: "Talk 2 — conference presentation",
-    title: "Talk 2",
-    description: "Translating demand signals into executable projects.",
+    alt: "Talk 2 — From GPU Waitlists to Committed Offtake",
+    title: "",
+    description:
+      "How to turn AI-native demand signals into structured offtake agreements that de-risk projects for providers and capital.",
   },
   {
     src: "/images/talk3.png",
-    alt: "Talk 3 — conference presentation",
-    title: "Talk 3",
-    description: "Navigating power-ready opportunities across Canada.",
+    alt: "Talk 3 — Mapping Power-Ready AI Sites and Partners",
+    title: "",
+    description:
+      "A view into where LPS owners are looking for AI infrastructure partners—and what AI customers actually need from those sites.",
   },
 ];
 
@@ -54,15 +57,16 @@ export default function GlobalInsights() {
 
         {/* 3-Column Talk Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {talks.map((talk) => (
+          {talks.map((talk, index) => (
             <article
-              key={talk.title}
+              key={`insight-${index}`}
               className="relative group overflow-hidden rounded-xl border border-outline-variant/10 min-h-[350px]"
             >
               <Image
                 src={talk.src}
                 alt={talk.alt}
                 fill
+                priority
                 className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 mix-blend-luminosity"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />

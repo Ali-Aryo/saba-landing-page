@@ -64,11 +64,12 @@ export default function ContactSection() {
           id="contact-heading"
           className="font-headline font-bold text-4xl md:text-6xl tracking-tight text-on-background mb-6"
         >
-          Ready to Evolve.
+          Ready to Place or Host AI Capacity?
         </h2>
         <p className="text-xl text-on-surface-variant mb-12 lg:mb-16 max-w-2xl mx-auto">
-          Initiate a conversation with our architectural team to map your
-          trajectory.
+          Whether you&apos;re an AI-native seeking capacity, a LPS
+          provider seeking offtakers, or a neo-cloud evaluating
+          opportunities—we can help map and qualify your next AI infrastructure move.
         </p>
 
         {submitted ? (
@@ -134,7 +135,7 @@ export default function ContactSection() {
               label="Inquiry Focus"
               id="message"
               rows={4}
-              placeholder="Detail your strategic objectives..."
+              placeholder="Example: 'AI-native firm needing 10–50MW in Western Canada' or 'Power + shell owner seeking AI offtakers' or 'Neo-cloud platform exploring LP-backed expansion'"
               {...register("message")}
               error={errors.message?.message}
             />

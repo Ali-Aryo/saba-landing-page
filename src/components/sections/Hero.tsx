@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import { useTypingEffect } from "@/hooks/useTypingEffect";
 
 const HERO_PHRASES = [
-  "Execution-Focused Model.",
+  "Execution for AI Cluster Deals.",
   "Next-Generation AI Campuses.",
   "Secure, Scalable Compute.",
   "Sovereign AI Compute.",
@@ -70,20 +70,21 @@ export default function Hero() {
           </div>
 
           <p className="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
-            Integrating infrastructure expertise, market access, and
-            customer-side demand understanding to identify, structure, and
-            advance confidential AI opportunities.
+            SABA helps AI-native firms secure GPU capacity, enables land, power,
+            and shell owners to find offtakers, and connects neo-clouds with
+            capital partners for secure, scalable, and performant AI
+            infrastructure in North America.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact">
               <Button variant="primary">
-                Explore Consulting
+                Explore AI Infra Consulting
                 <ArrowRight size={18} />
               </Button>
             </a>
             <a href="#insights">
-              <Button variant="secondary">View Case Studies</Button>
+              <Button variant="secondary">View AI Capacity Case Studies</Button>
             </a>
           </div>
         </div>

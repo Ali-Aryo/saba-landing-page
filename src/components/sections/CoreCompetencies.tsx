@@ -1,4 +1,4 @@
-import { Globe, Award, Rocket } from "lucide-react";
+import { Globe, Award, Rocket, Handshake } from "lucide-react";
 import type { ReactNode } from "react";
 
 interface Competency {
@@ -10,21 +10,27 @@ interface Competency {
 const competencies: Competency[] = [
   {
     icon: <Globe size={28} />,
-    title: "Infrastructure Knowledge",
+    title: "AI Natives, Labs, and Enterprise AI Teams",
     description:
-      "Deep Canadian AI infrastructure knowledge and relationships.",
+      "Advising AI-native firms, labs, and enterprise AI teams that need secure, scalable, and performant GPU capacity in North America—from scouting power-ready sites to structuring long-term offtake agreements.",
   },
   {
     icon: <Award size={28} />,
-    title: "Top-Ranked Experience",
+    title: "LPS Providers",
     description:
-      "Direct experience leading Canada's top-ranked AI cluster (Top500).",
+      "Helping LPS owners across North America identify AI offtakers, structure bankable contracts, and select infrastructure partners for accelerated deployment of AI-ready capacity.",
   },
   {
     icon: <Rocket size={28} />,
-    title: "Executable Projects",
+    title: "Neo-Clouds and LPS",
     description:
-      "Ability to translate demand signals into executable projects for AI-native firms and labs.",
+      "Partnering with neo-clouds, infrastructure platforms, and LPS to originate and qualify AI infrastructure opportunities, match them with AI-native demand, and de-risk investment decisions using real project experience—including leading Canada's top-ranked AI clusters.",
+  },
+  {
+    icon: <Handshake size={28} />,
+    title: "From Signal to Signed Deal",
+    description:
+      "Converting abstract AI demand signals and fragmented site options into structured deals: aligned term sheets, technical architectures, and governance models that work for AI customers, providers, and capital partners.",
   },
 ];
 
@@ -42,16 +48,16 @@ export default function CoreCompetencies() {
             id="competencies-heading"
             className="font-headline font-bold text-4xl md:text-5xl tracking-tight text-on-background mb-6"
           >
-            Core Competencies
+            Who We Help in the AI Infrastructure Ecosystem
           </h2>
           <p className="text-lg text-on-surface-variant leading-relaxed">
-            Access to AI-native firms and labs seeking GPU clusters, with the
-            ability to translate demand signals into executable projects.
+            We serve three interconnected audiences—AI-native demand, infrastructure
+            supply, and capital—bridging them into executable, high-conviction deals.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Cards — 2x2 grid */}
+        <div className="grid md:grid-cols-2 gap-8">
           {competencies.map((item) => (
             <article
               key={item.title}
